@@ -1,5 +1,6 @@
 package com.moashraf.db
 
+import db.tables.UserTable
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
@@ -20,6 +21,6 @@ fun Application.initDb() {
     )
 
     transaction(db = db) {
-
+        SchemaUtils.create(UserTable)
     }
 }
