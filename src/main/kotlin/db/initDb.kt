@@ -2,6 +2,7 @@ package com.moashraf.db
 
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 
 fun Application.initDb() {
@@ -18,5 +19,7 @@ fun Application.initDb() {
         user = user
     )
 
-    transaction(db = db) {  }
+    transaction(db = db) {
+
+    }
 }

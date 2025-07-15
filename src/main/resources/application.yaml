@@ -12,5 +12,5 @@ jwt:
 database:
   url: "jdbc:mysql://localhost:3306/ktor_moashrafff_db"
   driver: "com.mysql.cj.jdbc.Driver"
-  user: "mo"
+  user: "ktor_moashrafff_db_user"
 
