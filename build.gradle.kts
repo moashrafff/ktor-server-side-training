@@ -31,4 +31,5 @@ dependencies {
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
     implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("org.mindrot:jbcrypt:0.4")
 }
