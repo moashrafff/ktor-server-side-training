@@ -17,19 +17,29 @@ class UserRepositoryImpl : UserRepository {
                 return@dbQuery user.toUser()
             }
             val newUser = UserEntity.new {
-                userName = registerRequest.userName
-                password = hashPassword(registerRequest.password)
+                this.userName = registerRequest.userName
+                this.password = hashPassword(registerRequest.password)
             }
             return@dbQuery newUser.toUser()
         }
     }
 
     override suspend fun getUserById(id: Int): User? {
-        TODO("Not yet implemented")
+        return dbQuery {
+            UserEntity.findById(id)?.toUser()
+        }
     }
 
     override suspend fun authenticate(request: LoginRequest): User? {
-        TODO("Not yet implemented")
+        return dbQuery {
+            val user = UserEntity.find { UserTable.userName eq request.userName }.firstOrNull()
+
+            user?.takeIf { userEntity ->
+                verifyPassword(plainPassword = request.password , hashedPassword = userEntity.password )
+            }?.let {
+                User(id = user.id.value, userName = user.userName)
+            }
+        }
     }
 
     override fun hashPassword(password: String): String = BCrypt.hashpw(password, BCrypt.gensalt())
