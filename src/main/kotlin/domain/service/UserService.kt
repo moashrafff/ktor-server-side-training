@@ -1,7 +1,7 @@
 package com.moashraf.domain.service
 
-import com.moashraf.domain.model.user.LoginRequest
-import com.moashraf.domain.model.user.RegisterRequest
+import com.moashraf.domain.model.user.request.LoginRequest
+import com.moashraf.domain.model.user.request.RegisterRequest
 import com.moashraf.domain.model.user.User
 
 interface UserService {

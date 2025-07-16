@@ -1,10 +1,9 @@
-package com.moashraf.domain.model.user
+package com.moashraf.domain.model.user.request
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RegisterRequest(
+data class LoginRequest(
     val userName : String,
-    val email : String,
     val password : String
 )

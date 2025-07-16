@@ -2,8 +2,8 @@ package com.moashraf.data.repo
 
 import com.moashraf.db.entity.UserEntity
 import com.moashraf.db.utils.dbQuery
-import com.moashraf.domain.model.user.LoginRequest
-import com.moashraf.domain.model.user.RegisterRequest
+import com.moashraf.domain.model.user.request.LoginRequest
+import com.moashraf.domain.model.user.request.RegisterRequest
 import com.moashraf.domain.model.user.User
 import com.moashraf.domain.repo.UserRepository
 import db.tables.UserTable
@@ -14,7 +14,7 @@ class UserRepositoryImpl : UserRepository {
         return dbQuery {
             val user = UserEntity.find { UserTable.userName eq registerRequest.userName }.firstOrNull()
             if (user != null) {
-                return@dbQuery user.toUser()
+                return@dbQuery null
             }
             val newUser = UserEntity.new {
                 this.userName = registerRequest.userName

@@ -3,6 +3,7 @@ package com.moashraf
 import com.moashraf.db.initDb
 import com.moashraf.di.configKoin
 import com.moashraf.domain.service.UserService
+import com.moashraf.route.userRoute
 import com.moashraf.security.configSecurity
 import io.ktor.server.application.*
 import org.koin.ktor.ext.get
@@ -19,4 +20,5 @@ fun Application.module() {
     val userService = get<UserService>()
 
     configSecurity(userService = userService)
+    userRoute(userService = userService)
 }
