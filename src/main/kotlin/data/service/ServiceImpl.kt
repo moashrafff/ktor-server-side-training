@@ -1,9 +1,9 @@
 package com.moashraf.data.service
 
 import com.moashraf.domain.service.UserService
-import com.moashraf.domain.model.LoginRequest
-import com.moashraf.domain.model.RegisterRequest
-import com.moashraf.domain.model.User
+import com.moashraf.domain.model.user.LoginRequest
+import com.moashraf.domain.model.user.RegisterRequest
+import com.moashraf.domain.model.user.User
 import com.moashraf.domain.repo.UserRepository
 
 class ServiceImpl(private val userRepository: UserRepository) : UserService {

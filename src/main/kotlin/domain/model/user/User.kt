@@ -1,4 +1,4 @@
-package com.moashraf.domain.model
+package com.moashraf.domain.model.user
 
 import kotlinx.serialization.Serializable
 

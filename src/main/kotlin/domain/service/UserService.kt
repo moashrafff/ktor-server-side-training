@@ -1,8 +1,8 @@
 package com.moashraf.domain.service
 
-import com.moashraf.domain.model.LoginRequest
-import com.moashraf.domain.model.RegisterRequest
-import com.moashraf.domain.model.User
+import com.moashraf.domain.model.user.LoginRequest
+import com.moashraf.domain.model.user.RegisterRequest
+import com.moashraf.domain.model.user.User
 
 interface UserService {
     suspend fun registerUser(registerRequest: RegisterRequest): User?

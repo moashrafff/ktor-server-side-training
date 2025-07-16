@@ -1,6 +1,6 @@
 package com.moashraf.db.entity
 
-import com.moashraf.domain.model.User
+import com.moashraf.domain.model.user.User
 import db.tables.UserTable
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass

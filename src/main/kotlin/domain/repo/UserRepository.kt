@@ -1,8 +1,8 @@
 package com.moashraf.domain.repo
 
-import com.moashraf.domain.model.LoginRequest
-import com.moashraf.domain.model.RegisterRequest
-import com.moashraf.domain.model.User
+import com.moashraf.domain.model.user.LoginRequest
+import com.moashraf.domain.model.user.RegisterRequest
+import com.moashraf.domain.model.user.User
 
 interface UserRepository {
     suspend fun createUser(registerRequest: RegisterRequest): User?
