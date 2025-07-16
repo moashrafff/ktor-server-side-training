@@ -13,6 +13,7 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
     configKoin()
+    configureContentNegotiation()
     initDb()
 
     val userService = get<UserService>()
