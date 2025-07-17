@@ -10,20 +10,20 @@ fun Application.configSecurity(userService: UserService) {
     val jwtSecret = System.getenv("jwt_secret")
     val jwtRealm = environment.config.property("jwt.realm").getString()
     val jwtIssuer = environment.config.property("jwt.issuer").getString()
-    val jwtAudience = environment.config.property("jwt.issuer").getString()
-    val jwtClaimField = environment.config.property("jwt.issuer").getString()
+    val jwtAudience = environment.config.property("jwt.audience").getString()
+    val jwtClaimField = environment.config.property("jwt.claimField").getString()
 
     val verifier = jwtVerifier()
 
     install(Authentication) {
         jwt("auth-jwt") {
             realm = jwtRealm
-            verifier(verifier = verifier)
-            validate { jwtCredential ->
-                jwtCredential.payload.getClaim(
+            verifier(verifier)
+            validate { cred ->
+                cred.payload.getClaim(
                     jwtClaimField
                 ).asInt()?.let {
-                    userService.getUserById(id = it)
+                    userService.getUserById(it)
                 }
             }
         }

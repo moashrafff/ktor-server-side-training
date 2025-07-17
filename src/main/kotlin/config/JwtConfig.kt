@@ -10,7 +10,7 @@ import java.util.Date
 fun Application.generateToken(user: User): String? = try {
     val jwtSecret = System.getenv("jwt_secret")
     val jwtIssuer = environment.config.property("jwt.issuer").getString()
-    val jwtAudience = environment.config.property("jwt.issuer").getString()
+    val jwtAudience = environment.config.property("jwt.audience").getString()
     val jwtClaimField = environment.config.property("jwt.issuer").getString()
     val expTimeInMillis = 24 * 60 * 60 * 1000
 
@@ -25,7 +25,7 @@ fun Application.generateToken(user: User): String? = try {
 fun Application.jwtVerifier(): JWTVerifier {
     val jwtSecret = System.getenv("jwt_secret")
     val jwtIssuer = environment.config.property("jwt.issuer").getString()
-    val jwtAudience = environment.config.property("jwt.issuer").getString()
+    val jwtAudience = environment.config.property("jwt.audience").getString()
 
     return JWT.require(
         Algorithm.HMAC256(jwtSecret)
