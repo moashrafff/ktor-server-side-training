@@ -4,6 +4,5 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CreateBlogRequest(
-    val title: String,
-    val content: String
+    val title: String, val content: String
 )

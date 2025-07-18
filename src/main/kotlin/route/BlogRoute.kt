@@ -17,7 +17,7 @@ fun Application.blogRoute(blogService: BlogService) {
             route("/api/blogs") {
                 get {
                     val blogs = blogService.getAllBlogs()
-                    if (blogs == null) {
+                    if (blogs.isNullOrEmpty()) {
                         call.respond(HttpStatusCode.NotFound, "blogs are empty")
                     } else {
                         call.respond(HttpStatusCode.OK, blogs)
