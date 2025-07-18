@@ -1,4 +1,4 @@
-package com.moashraf.db.utils
+package com.moashraf.data.db.utils
 
 import kotlinx.coroutines.Dispatchers
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction

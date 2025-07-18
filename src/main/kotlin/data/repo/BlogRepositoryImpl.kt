@@ -1,8 +1,8 @@
 package com.moashraf.data.repo
 
-import com.moashraf.db.entity.BlogEntity
-import com.moashraf.db.entity.UserEntity
-import com.moashraf.db.utils.dbQuery
+import com.moashraf.data.db.entity.BlogEntity
+import com.moashraf.data.db.entity.UserEntity
+import com.moashraf.data.db.utils.dbQuery
 import com.moashraf.domain.model.blog.Blog
 import com.moashraf.domain.model.blog.CreateBlogRequest
 import com.moashraf.domain.model.blog.UpdateBlogRequest

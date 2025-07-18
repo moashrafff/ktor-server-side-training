@@ -1,6 +1,6 @@
 package com.moashraf
 
-import com.moashraf.db.initDb
+import com.moashraf.data.db.initDb
 import com.moashraf.di.configKoin
 import com.moashraf.domain.service.BlogService
 import com.moashraf.domain.service.UserService

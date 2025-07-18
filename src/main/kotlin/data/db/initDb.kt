@@ -1,7 +1,7 @@
-package com.moashraf.db
+package com.moashraf.data.db
 
-import com.moashraf.db.tables.BlogTable
-import db.tables.UserTable
+import com.moashraf.data.db.tables.BlogTable
+import com.moashraf.data.db.tables.UserTable
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils

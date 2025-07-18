@@ -1,12 +1,12 @@
 package com.moashraf.data.repo
 
-import com.moashraf.db.entity.UserEntity
-import com.moashraf.db.utils.dbQuery
+import com.moashraf.data.db.entity.UserEntity
+import com.moashraf.data.db.utils.dbQuery
 import com.moashraf.domain.model.user.request.LoginRequest
 import com.moashraf.domain.model.user.request.RegisterRequest
 import com.moashraf.domain.model.user.User
 import com.moashraf.domain.repo.UserRepository
-import db.tables.UserTable
+import com.moashraf.data.db.tables.UserTable
 import org.mindrot.jbcrypt.BCrypt
 
 class UserRepositoryImpl : UserRepository {

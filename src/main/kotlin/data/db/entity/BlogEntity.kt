@@ -1,6 +1,6 @@
-package com.moashraf.db.entity
+package com.moashraf.data.db.entity
 
-import com.moashraf.db.tables.BlogTable
+import com.moashraf.data.db.tables.BlogTable
 import com.moashraf.domain.model.blog.Blog
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
