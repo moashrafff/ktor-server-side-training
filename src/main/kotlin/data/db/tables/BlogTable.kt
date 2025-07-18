@@ -1,6 +1,5 @@
 package com.moashraf.data.db.tables
 
-import com.moashraf.data.db.tables.UserTable
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.ReferenceOption
 
